@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 内外边距 */
+}
+
+body{
+    height: 100vh;
+    background: #4c4c4c url('./bg.jpeg') no-repeat;
+    background-size: cover;
+    display: flex;
+    /* 弹性容器 */
+    justify-content: center;
+    /* x轴居中 */
+    align-items: center;
+    /* Y轴居中 */
+}
+.wrapper{
+    width: 850px;
+    display: flex;
+    /* 所有子容器排成一行 */
+}
+.speed{
+    background-color: #fff;
+    margin: 10px;
+    flex: 1;
+    border-radius: 50px;
+    overflow: hidden;
+    /* 超出就隐藏 */
+}
+.speed-bar{
+    width: 100%;
+    height: 16.3%;
+    background: linear-gradient(to bottom,#2376ae,#c16ecf);
+    display: flex;
+    /* 弹性容器 */
+    justify-content: center;
+    /* x轴居中 */
+    align-items: center;
+    /* Y轴居中 */
+    color:#fff;
+}
