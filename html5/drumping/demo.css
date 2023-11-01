@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}/*重置*/
+html,body{
+    height: 100%;/*天坑gen*/
+
+}
+html {
+    font-size: 10px;
+    background: url(./background.jpg) bottom center;
+    background-size: cover;/*超出则剪裁*/
+}
+.keys {
+    height: 100%;
+    display: flex;/*弹性布局*/
+    align-items: center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+    /* background-color: green;背景颜色 背景调试法 */
+} 
+ 
+.key{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    width: 10rem;
+    text-align: center;
+    color:white;
+    background: rgba(0, 0, 0, 0.4);
+
+}
