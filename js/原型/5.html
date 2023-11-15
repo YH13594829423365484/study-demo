@@ -1,0 +1,17 @@
+<script>
+    Person.prototype.say=function(){
+        console.log('hello');
+    }
+    function Person(){
+        this.name ='yz'
+        this.age = 18
+        // var this={
+        //     name:'yz',
+        //     age:18  
+        //     __proto__:Person.prototype
+        // }
+        // return this
+    }
+    let p=new Person()
+    p.say()
+</script>
