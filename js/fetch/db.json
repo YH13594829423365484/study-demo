@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "yh"
+    },
+    {
+      "model": "text-davinci-003",
+      "prompt": "YH",
+      "temperature": 0.2,
+      "id": 2
+    },
+    {
+      "model": "text-davinci-003",
+      "prompt": "HOw are you?",
+      "temperature": 0.2,
+      "id": 3
+    },
+    {
+      "titile": "你不知道的Javascript",
+      "author": "李总",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
