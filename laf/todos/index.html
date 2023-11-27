@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花门楼</title>
+</head>
+<body>
+    <h1>萍乡首富-</h1>
+   <div id="result"></div>
+   <script>
+    const xhr = new XMLHttpRequest();// js主动去请求接口的功臣
+    xhr.open('GET', 'https://q9liut.laf.run/get-list');
+    xhr.send();
+    xhr.onreadystatechange = function (e) {
+        if (e.target.status===200&& e.target.readyState === 4) {
+             const {data} = JSON.parse(e.target.responseText);  //对象的解构
+             console.log(data);
+             document.querySelector('#result').innerHTML=data.map(todo=>`
+                <li>${todo.txt}</li>
+             `).join('')
+        }
+    }
+    </script>
+</body>
+</html>
