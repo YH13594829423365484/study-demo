@@ -8,25 +8,21 @@
 <body>
     <div id="app"></div>
     <template id="my-app">
-        <h2>{{msg}}</h2>
-        <h2 v-text="msg"></h2>
-        <h1 v-html="article"></h1>
-    </template>
+        <img width="200" v-bind:src="imgUrl" alt="">
+        <a :href="link">跳转</a>
+        <!-- v-bind 用来动态绑定属性，在这里将字符串变为变量 :为v-bind的缩写-->
+    </template> 
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.js"></script>
     <script>
-        const app =Vue.createApp({
+        Vue.createApp({
             template:'#my-app',
-            data(){
+            data(){//数据源
                 return {
-                    msg:'指令的使用',
-                    article:'<p>这是第一个段落</p><p>这是第二个段落</p>',
+                    imgUrl:'https://p.qqan.com/up/2020-7/2020070908330789546.jpg',
+                    link:'http://www.baidu.com/'
                 }
             },
-            method(){
-
-            }
-        })
-        app.mount('#app')
+        }).mount('#app')
     </script>
 </body>
 </html>

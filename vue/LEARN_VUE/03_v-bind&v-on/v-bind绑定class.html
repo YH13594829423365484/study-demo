@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <template id="my-app">
+        <!-- <h2 :class="className">v-band绑定类名</h2>
+        <h2 :class="{'active':isActive}">v-band绑定类名</h2>
+        <button @click="toggle">切换</button> -->
+        <!-- <h2 :class="{'active':isActive,'title':ture}">动态绑定多个类名</h2> -->
+        <!-- <h2 :class="classobj">通过对象绑定多个类名</h2>
+        <h2 :class="getClass">通过函数的返回值来绑定多个类名</h2> -->
+        <h2 :class="[isActive ? 'active':'name']">三元运算符</h2>
+            
+        <div :abc="isActive">hello world</div>
+        <!-- 添加了属性abc值为false -->
+    </template> 
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            template:'#my-app',
+            data(){//数据源
+                return {
+                 className:'active',
+                 isActive:false,
+                 classobj:{
+                    active:true,
+                    title:true
+                 }
+                }
+            },
+            methods:{
+                getClass(){
+                    return{
+                        active:true,
+                        title:true
+                    }
+                },
+                toggle(){
+                    this.isActive = !this.isActive;
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
