@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path:'/',
-    redirect:'../views/home'
+    redirect:'/home'
   },
   {
     path:'/home',
@@ -13,7 +13,7 @@ const routes = [
   },
   {
     path:'/item',
-    name: 'hitem',
+    name: 'item',
     component:()=>import('../views/item')
   },
   {
