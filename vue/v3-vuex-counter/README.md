@@ -39,3 +39,29 @@
         - s t o r e 数据模块
         - 组件 UI 模块 
     - main.js  入口 use一下 createPinia()
+
+    - 网易云音乐 幻灯片组件
+
+    - 前后端分离 开发人员各司其职，facebook 
+    - 前端 8080   5173
+    - 后端 3000  负责写api
+    http://localhost:8080/
+    127.0.0.1 定位一台机器 可以运行多个程序
+    
+    - UI组件 数据管理  模块化
+        - vue项目之中负责请求管理的 axios  api文件夹
+
+- api/目录 请求模块，是vue项目的核心模块  
+    前后端协作
+    - api/index.js
+        业务 列出来各种请求接口 getBannerData
+    - /api/http.js 封装请求
+    
+    - 为何不用fetch和xhr?
+        它们都是流程性的代码 重复编写 
+    - 大型项目中
+        有几十个甚至是几百个请求，模块化的需要 散落再各个组件里的请求是很难管理的
+    - axios 封装
+        - xhr,fetch 它们太弱小了，
+            因为它们需要许多次new XMLHttpRequest或则fetch
+        - 好处呢？
