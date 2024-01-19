@@ -1,17 +1,18 @@
 <template>
 	<view class="content">
 		<navigator url="/pages/about/about">去关于页面</navigator>
-		<image class="logo" 
-		src="/static/logo.png" 
-		@click='goAbout'></image>
+		<image class="logo" src="/static/logo.png" @click="goAbout"></image>
 		
 		<view class="text-area" @click='changeTitle'>
 			<text class="title">{{title}}</text>
 			<text>{{reverseTitle}}</text>
 		</view>
+		<view class="name">
+			<text>{{name}}</text>
+		</view>
+		
 		<song :data='list.song'/>
 	</view>
-	
 </template>
 
 <script setup>
@@ -24,22 +25,25 @@ const name = getApp().globalData.name
 const changeTitle = () => {
 	title.value = title.value === '你好' ? 'Hello' : '你好'
 }
-
 const reverseTitle = computed(() => {
 	return title.value.split('').reverse().join('')
 })
 
-const list=reactive({
-	song:{
-		img: 'https://img1.baidu.com/it/u=3709586903,1286591012&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',	title:'卡通头像',
-		price:'10',
-		marketPrice:'13',
+
+const list = reactive({
+	song: {
+		img: 'https://img1.baidu.com/it/u=3709586903,1286591012&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+		title: '卡通头像',
+		price: '10',
+		marketPrice: '13',
 	}
 })
 
-const goAbout=()=>{
+
+
+const goAbout = () => {
 	uni.navigateTo({
-		url:'/pages/about/about'
+		url: '/pages/about/about'
 	})
 }
 
