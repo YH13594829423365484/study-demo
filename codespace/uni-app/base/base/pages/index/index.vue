@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<navigator url="/pages/about/about">去关于页面</navigator>
+		<!-- <navigator url="/pages/about/about">去关于页面</navigator>
 		<image class="logo" src="/static/logo.png" @click="goAbout"></image>
 		
 		<view class="text-area" @click='changeTitle'>
@@ -9,7 +9,7 @@
 		</view>
 		<view class="name">
 			<text>{{name}}</text>
-		</view>
+		</view> -->
 		
 		<song :data='list.song'/>
 	</view>
