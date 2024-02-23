@@ -1,43 +1,21 @@
-function TreeNode(val) {
-    this.val = val
-    this.left = null
-    this.right = null
-}
-let root = {
-    val: 'A',
-    left: {
-        val: 'B',
-        left: {
-            val: 'D',
-        },
-        right: {
-            val: 'E',
-        },
-    },
-    right: {
-        val: 'C',
-        left: null,
-        right: {
-            val: 'F'
-        },
+Function.prototype.mycall = function(context) {
+    context = context || window; // 如果未提供上下文，则默认为全局对象
+    context.ID = this; // 将当前函数设置为上下文对象的一个属性
+    // 获取传入的参数
+    var args = [];
+    for (var i = 1; i < arguments.length; i++) {
+      args.push('arguments[' + i + ']');
     }
-}
-var preorderTraversal = function (root) {
-    if (!root) return []
-    // 合理安排入栈和出栈的顺序
-    const res = []
-    const stack = []
-    stack.push(root)
-    while (stack.length > 0) {
-        const cur = stack.pop()
-        res.push(cur.val)
+    // 调用函数
+    var result = eval('context.ID(' + args + ')');
+    // 清除添加的属性
+    delete context.ID;
+    return result;
+  };
 
-        if (cur.right) {
-            stack.push(cur.right)
-        }
-        if (cur.left) {
-            stack.push(cur.left)
-        }
-    }
-    return res
-}
+  function greet(greeting) {
+    console.log(greeting + ':' + this.name);
+  }
+  
+  var obj = { name: '张三' };
+  greet.mycall(obj, '姓名');  // 输出结果-- 姓名:张三
