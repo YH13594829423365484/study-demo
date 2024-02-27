@@ -1,21 +1,21 @@
 function xq(){
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
-            console.log('相亲');
-            resolve();
+            console.log('a');
+            resolve();// 成功完成异步操作，将数据作为参数传递给 resolve 方法        
             },2000)
     })
 }
 function marry(){
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
-            console.log('结婚');
+            console.log('b');
             resolve();
             },1000)
     });
 }
 function baby(){
-    console.log('万星星');
+    console.log('c');
 }
 xq().then(()=>{
    return marry()
