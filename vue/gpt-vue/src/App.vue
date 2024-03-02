@@ -1,22 +1,16 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-<div class="flex"></div>
+  <!--
+    异步组件 没有加载出来之前， Suspense 会显示占位
+    懒加载， 页面级别组件加载出来之前，显示点loading... -->
+  <Suspense>
+    <router-view />
+    <template #fallback>
+      Loading...
+    </template>
+  </Suspense>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>

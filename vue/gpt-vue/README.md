@@ -20,3 +20,36 @@
          - tailwindcss
             - 原子化 css 开发省力高效
             - css 工程化  开发依赖， 配置， 生成css文件
+            - 适配 rem
+            - 自定义tailwindcss 组件类 @apply一下 解决复用问题
+
+### 亮点
+   - 路由懒加载
+      - 优化了首页加载的速度 性能优化  () => import()
+      - Suspense 优化异步加载组件体验，比如显示loadin...
+         - slot
+            默认  具名...
+      - 路由守卫
+         transition 页面动画 
+      - 骨架屏 
+
+   - 代码的封装写的挺好的
+      - 干净漂亮的分离一些函数，一个函数只做一个功能(好代码)
+      举例
+         - getApikey  开源项目可以获得免费的api-key
+         - clearMessageContent
+         - switchConfigStatus
+
+- 难点
+   - 使用了cryptoJS 加密用户openai的api-key 更安全
+      - 引入crypto-js 
+      - .AES.encrypt(原字符串，签名)
+      - .AES.decrypt()
+
+- 功能点介绍
+   - chatbot 模块
+      - 与openAI LLM 进行生成式问答功能
+      - 使用了crypto-js 对用户的api-key 进行加密
+      - 根据功能点，函数封装得很细，便于复用和维护 
+         getApikey saveApikey getSecretKey clearMessageContent
+         switchConfigStatus sendOrSave 
