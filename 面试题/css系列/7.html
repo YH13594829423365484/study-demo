@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .box{
-      width: 500px;
+    .A {
+      /* width: 500px;
       height: 500px;
-      background-color: antiquewhite;
+      background-color: antiquewhite; */
       /* position: relative; */
+
+      /* display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      height: 500px;
+      width: 500px; */
+
+      /* text-align: center;
+      height: 500px;
+      line-height: 500px; */
+
       /* display: flex;
       justify-content: center;
       align-items: center; */
@@ -22,12 +34,32 @@
       text-align: center;
       vertical-align: middle; */
 
+      width: 500px;
+      height: 500px;
+      background-color: antiquewhite;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+  
+    
     }
-    .wrap{
-      /* display: inline-block; */
+
+    .B {
+      /* width: 200px; */
+      /* height: 200px; */
+      /* background-color: #5cd552; */
+
+      display: inline-block;
       width: 200px;
       height: 200px;
       background-color: #5cd552;
+
+      /* display: inline-block;
+      vertical-align: middle; */
+      /* 垂直居中 */
+      /* line-height: normal; */
+      /* 重置line-height */
+
       /* position: absolute;
       left: 50%;
       top: 50%; */
@@ -38,13 +70,15 @@
       /* margin-left: 150px;
       margin-top: 150px; */
 
-      margin: 0 auto;
+      /* margin: 0 auto; */
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <div class="wrap">hello world</div>
+  <div class="A">
+    <div class="B">hello world</div>
   </div>
 </body>
+
 </html>

@@ -9,3 +9,5 @@ function Foo(){
 }
 
 let f = new Foo('Tom')
+
+

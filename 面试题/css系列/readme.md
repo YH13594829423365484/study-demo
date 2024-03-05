@@ -4,7 +4,7 @@
 标准盒模型 盒子总宽度：width + padding + border + margin
 
 怪异盒模型(IE) 盒子总宽度: width + margin
-
+          
 2. css中的选择器有哪些？说说优先级
 id选择器
 
@@ -130,3 +130,5 @@ perspective + translateZ
 16. 如何显示一个小于10px的文字
 zoom
 transform: scale(xxx);
+
+
