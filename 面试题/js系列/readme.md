@@ -152,6 +152,12 @@ class 继承
 4. 监听onreadystatechange事件，通过判断readyState的值来获取到最终的数据
 5. 将数据更新到html中
 
-# 17. 
+# 17. 怎么实现上拉加载下拉刷新
+1. 监听touchstart touchmove touchend 事件,记录手指移动的距离，大于临界值时实现刷新操作，其中使用tranform:translateY()来添加各处的动画
+2. 根据手指滑动的方向和容器顶部或底部到屏幕的距离来确定此时该执行上拉加载更多还是下拉刷新
+
+# 18. 防抖节流
+
+# 19.
 
 
