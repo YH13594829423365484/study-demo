@@ -96,8 +96,6 @@ Object.assign()     concat() slice() [...arr]
 class 继承
 
 
-
-
 # 11. 说说JS中的this
 - 是什么:this是函数在运行过程中自动生成的一个对象，用来代指作用域的指向，它总是指向调用它的对象。
 - 绑定规则：
@@ -116,5 +114,44 @@ class 继承
 4. 返回这个对象
 
 # 13. call,apply,bind的原理
+
+# 14. 说说JS中的事件模型
+- 什么是事件流
+
+- 分类
+    1. DOM0级 onclick(无法控制事件在捕获冒泡哪个阶段执行)
+    2. DOM1级 addeventListen(可以控制事件执行在哪个阶段)
+    3. IE模型 attachEvent(无法控制事件在捕获冒泡哪个阶段执行)
+
+# 15. 说说typeof和instanceof的区别
+- typeof
+    能判断除null之外的所有原始类型
+
+- instanceof
+    能判断一个变量是否属于某种类型，是通过原型链来判断的
+
+- Object.protoype.tostring.call()
+
+1. [].toString() 数组版本的toString
+2. Object.prototype.toString.call([])  对象版本的toString
+3. [].toString() 对象版本的toString
+
+该方法回让变量 x 调用对象上的toString涵数，而toString返回值为'[object,Object]'类型
+
+- Array.isArray()
+该方法只能判断数组
+
+# 16. 说说Ajax的原理
+- 是什么:
+    Async Javascript and XML ， 是一种异步js和网页交互的技术，可以实现不刷新网页就跟服务器交换数据，更新页面
+
+- 实现过程
+1. 创建XHR实例对象
+2. 调用实例对象中的open方法与服务器建立连接
+3. 调用实例对象中的send方法发送请求
+4. 监听onreadystatechange事件，通过判断readyState的值来获取到最终的数据
+5. 将数据更新到html中
+
+# 17. 
 
 
