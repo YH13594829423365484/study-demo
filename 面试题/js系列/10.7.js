@@ -9,12 +9,13 @@ class Parent {
   
   class Child extends Parent {
     constructor(type, name) {
-      super(name)
+      super(name)  
       this.type = type;
     }
   }
   
   let c = new Child('child', 'Tom')
   
-  console.log(c.name);
+  console.log(c.name);//输出Tom
   
+ 

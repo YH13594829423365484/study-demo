@@ -1,21 +1,46 @@
-function Car(color, speed) {
+// function Car(color, speed) {
+//     this.color = color
+//     this.speed = speed
+//     this.seat = [1, 2]
+//   }
+  
+//   Truck.prototype = new Car('red', 200)
+//   function Truck() {
+//     this.container = true
+//   }
+  
+  
+//   let truck = new Truck()
+//   let truck2 = new Truck()
+  
+//   truck.seat.push(3)
+  
+  
+  
+//   console.log(truck2.seat);
+
+  function Car(color, money) {
     this.color = color
-    this.speed = speed
-    this.seat = [1, 2]
+    this.money = money 
   }
   
-  Truck.prototype = new Car('red', 200)
-  function Truck() {
-    this.container = true
+  BMW.prototype = new Car('black',30)  //将子类的原型指向父类的实例
+  function BMW() {
   }
   
+  let BMW3 = new BMW()
   
-  let truck = new Truck()
-  let truck2 = new Truck()
+  console.log(BMW3.color);
+  console.log(BMW3.money);
   
-  truck.seat.push(3)
-  
-  
-  
-  console.log(truck2.seat);
-  
+
+  // function Car(color, speed)
+  // {this.color = color
+  //   this.speed = speed
+  // }
+  //   Truck.prototype = new Car()
+  //   function Truck(){
+  //     this.container =true
+  //   }
+  //   let truck = new Truck()
+  //   console.log(truck);

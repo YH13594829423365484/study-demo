@@ -1,0 +1,13 @@
+const koa =require('koa');
+const cors = require('koa2-cors');
+const bodyParser = require('koa-bodyparser');
+const userRouter=require('./routes/user');
+
+const app = new koa()
+
+app.use(bodyParser());//解析post请求传递的参数
+app.use(cors());//处理跨域
+app.use(userRouter.routes(),userRouter.allowedMethods());//让接口生效
+app.listen(3000,()=>{
+    console.log('项目已启动在3000端口')
+})
