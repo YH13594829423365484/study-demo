@@ -14,21 +14,24 @@
                 </van-cell-group>
                 <div style="margin: 16px;">
                     <van-button round block type="primary" native-type="submit">
-                        提交
+                        登录
                     </van-button>
                 </div>
             </van-form>
 
         </div>
+        <p class="register" @click="goRegister">新用户？点击这里注册</p>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import axios from '@/api';
+import {useRouter} from 'vue-router';
 
 const username = ref('');
 const password = ref('');
+const router=useRouter();
 
 const onSubmit = async(values) => {
     console.log(values);
@@ -37,7 +40,14 @@ const onSubmit = async(values) => {
         password: values.password
     })
     console.log(res);
+    localStorage.setItem('userInfo',JSON.stringify(res.data))
+    router.push('/noteClass');
 };
+const goRegister=()=>{
+    router.push('/register')
+}
+
+
 </script>
 
 <style lang="less" scoped>

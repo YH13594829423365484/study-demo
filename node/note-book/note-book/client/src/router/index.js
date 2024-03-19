@@ -5,6 +5,15 @@ const routes=[
         path:'/login',
         component:()=>import('../views/Login.vue')
     },
+    {
+        path:'/register',
+        component:()=>import('../views/Register.vue')
+
+    },
+    {
+        path:'/noteClass',
+        component:()=>import('../views/NoteClass.vue')
+    }
 ]
 
 const router=createRouter({
