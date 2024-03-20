@@ -32,7 +32,16 @@ const routes=[
         meta:{
             title:'笔记列表'
         }
-    }
+    },
+    {
+        path:'/noteDetail',
+        name:'/noteDetail',
+        component:()=>import('../views/NoteDetail.vue'),
+        meta:{
+            title:'笔记详情'
+        }
+    },
+
 ]
 
 const router=createRouter({
