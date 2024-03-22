@@ -1,6 +1,6 @@
 const Router = require('@koa/router')
 const router = new Router()
-const { userLogin, userFind, userRegister } = require('../contorllers/mysqlControl.js')
+const { userLogin, userFind, userRegister } = require('../controllers/mysqlControl.js')
 
 router.prefix('/user')
 

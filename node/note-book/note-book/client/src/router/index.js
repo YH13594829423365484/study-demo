@@ -2,8 +2,12 @@ import {createRouter,createWebHistory} from 'vue-router'
 
 const routes=[
     {
+        path:'/',
+        redirect:'noteClass'
+    },
+    {
         path:'/login',
-        name:'/login',
+        name:'login',
         component:()=>import('../views/Login.vue'),
         meta:{
             title:'登录'
@@ -11,7 +15,7 @@ const routes=[
     },
     {
         path:'/register',
-        name:'/register',
+        name:'register',
         component:()=>import('../views/Register.vue'),
         meta:{
             title:'注册'
@@ -19,7 +23,7 @@ const routes=[
     },
     {
         path:'/noteClass',
-        name:'/noteClass',
+        name:'noteClass',
         component:()=>import('../views/NoteClass.vue'),
         meta:{
             title:'笔记分类'
@@ -27,7 +31,7 @@ const routes=[
     },
     {
         path:'/noteList',
-        name:'/noteList',
+        name:'noteList',
         component:()=>import('../views/NoteList.vue'),
         meta:{
             title:'笔记列表'
@@ -35,10 +39,18 @@ const routes=[
     },
     {
         path:'/noteDetail',
-        name:'/noteDetail',
+        name:'noteDetail',
         component:()=>import('../views/NoteDetail.vue'),
         meta:{
             title:'笔记详情'
+        }
+    },
+    {
+        path:'/notepublish',
+        name:'notepublish',
+        component:()=>import('../views/NotePublish.vue'),
+        meta:{
+            title:'笔记发布'
         }
     },
 
