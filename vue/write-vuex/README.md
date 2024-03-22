@@ -24,9 +24,20 @@
         我平时比较喜欢在掘金写技术文章 -> es6
         通过阅读源码提升代码能力 -> vuex
 
+- vue 源码学到了什么
+    - 严谨的代码逻辑
+        vuex 根据type查找mutation时候&& 找到了才会执行
+    - 优秀的代码思想
+        提升自己的代码能力
+    
+
 - vuex 源码学到了哪些？
     - createStore 返回了store状态树单例(正确)，
         因为它只会被调用一次
+    - provide inject
+        use(store) 启用了 vuex 生态 会默认调用 install 方法，传递app
+    - dispatch  commit 方法
+    - API的使用者 -> 了解底层和原理 -> 使用VUE更得心应手
     - es6 class 封装store 类
         - 把复杂留给自己 把简单交给别人
             options state 函数返回的对象是初始数据
@@ -35,7 +46,17 @@
             完成响应式数据的创建 即 this._state
         - _代表私有属性，
             get 方法    get state 返回this._state.data
-        
-
-
- 
+    - es6 class 语法
+        - es6 主要目的让JS 适合大型项目企业级开发 ,简洁优雅
+        - 箭头函数  解构 模板字符串     
+            传统的面向对象支持
+            class constructor extends static  get set 
+        - 依然是原型链式的面向对象
+        - 只不过class就是语法糖
+        - proxy 
+            聊到 reactive 源码
+        - Map weakMap   JSON Object 新的数据结构
+            Set WeakSet
+        - es6 模块化
+        - promise
+        - async await

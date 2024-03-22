@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex'
+import { useStore } from './store/gvuex.js'
 const store = useStore()
 const count = computed(() => store.state.count)
 const double = computed(() => store.getters.double)
