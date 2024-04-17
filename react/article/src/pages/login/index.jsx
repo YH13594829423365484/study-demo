@@ -2,9 +2,10 @@ import React from 'react';
 import { Card } from "antd";
 import logo from '@/assets/logo.jpg'
 import './index.scss'
-import { Button, Checkbox, Form, Input, message, Space } from 'antd';
+import { Button, Checkbox, Form, Input, message } from 'antd';
 import { useStore } from '@/store';
 import { useNavigate } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -27,6 +28,7 @@ const Login = () => {
     };
     return (
         <div className='login'>
+            {contextHolder}
             <Card className='login-container'>
                 <img className='login-logo' src={logo} alt="" />
                 <Form onFinish={onFinish} 

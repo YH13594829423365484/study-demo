@@ -1,0 +1,23 @@
+.header{
+    // padding: 0;
+    display: flex;
+    justify-content: space-between;
+    color: azure;
+    .logo{
+        width: 60px;
+        height: 60px;
+        background: url("@/assets/logo.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .user-info{
+        .user-name{
+            margin-right: 20px;
+        }
+        .user-logout{
+            cursor: pointer;
+        }
+    }
+}
+.body{
+    height: calc(100vh - 64px);
+}

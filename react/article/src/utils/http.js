@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getToken } from "@/utils";
 
 const http=axios.create({
     baseURL:'http://geek.itheima.net/v1_0',
@@ -6,7 +7,10 @@ const http=axios.create({
 })
 
 http.interceptors.request.use((config)=>{
-    // console.log(config);
+    const token=getToken()
+    if(token){
+        config.headers.Authorization=`Bearer ${token}`
+    }
     return config
 },(err)=>{
     return Promise.reject(err)

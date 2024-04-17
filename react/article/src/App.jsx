@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import { AuthRoute } from '@/components/AuthRoute';
 
 
 import Login from '@/pages/login';
@@ -9,7 +10,7 @@ const App = () => {
         <BrowserRouter>
         <div className='App'>
             <Routes>
-                <Route path='/' element={<Layout />}></Route>
+                <Route path='/' element={<AuthRoute>{<Layout />}</AuthRoute>}></Route>
                 
                 <Route path='/login' element={<Login />}></Route>
             </Routes>
