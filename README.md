@@ -1,12 +1,11 @@
-# AI全栈工程师
-
-## 前端 + AIGC
-
-- html5 结构
-- css3 layout + 样式
-- js 业务
-前端业务
-后端业务
+- ai
+- vue
+- react
+- html
+- css
+- js
+- 前端
+- 后端
 
 ## markdown  格式工具
 
