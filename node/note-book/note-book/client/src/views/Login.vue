@@ -3,7 +3,7 @@
         <h1>登录</h1>
         <div class="login-wrapper">
             <div class="avatar">
-                <img src="https://so.360tres.com/dmsmty/160_160_100/t01073366af15818a90.webp">
+                <img src="https://p1.ssl.qhimgs1.com/sdr/400__/t019733da8611838451.jpg">
             </div>
             <van-form @submit="onSubmit">
                 <van-cell-group inset>
