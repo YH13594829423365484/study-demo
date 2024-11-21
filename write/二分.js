@@ -13,4 +13,4 @@ function fn(arr, target) {
     }
     return -1
 }
-console.log(fn([7, 5, 0, 3, 1], 7));
+console.log(fn([7, 5, 0, 3, 1], 1));

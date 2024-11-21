@@ -10,15 +10,15 @@ function fn(nums, target) {
     }
 }
 // 用map优化
-function newFn(nums,target){
-    const map=new Map()
-    for(let i=0;i<nums.length;i++){
-        const count=target-nums[i]
-        if(map.has(count)){
-            return [map.get(count),i]
+function newFn(nums, target) {
+    const map = new Map()
+    for (let i = 0; i < nums.length; i++) {
+        let count = target - nums[i]
+        if (map.has(count)) {
+            return [i, map.get(count)]
+        } else {
+            map.set(nums[i], i)
         }
-        map.set(nums[i],i)
     }
-    return []
 }
-console.log(newFn(nums,target));
+console.log(newFn(nums, target));

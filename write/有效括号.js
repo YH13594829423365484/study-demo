@@ -22,16 +22,16 @@ function fn(s) {
 }
 //用对象存储数据来优化
 function newFn(s) {
-    const res = []
-    const obj = { ")": "(", "]": "[", "}": "{" }
-    for (let value of s) {
-        if (obj[value]) {
-            if (res.pop() !== obj[value]) return false
-        } else {
-            res.push(value)
+    const obj={")":"(","]":"[","}":"{"}
+    const res=[]
+    for(let i=0;i<s.length;i++){
+        if(s[i]===")"||s[i]==="]"||s[i]==="}"){
+            if(obj[s[i]]!==res.pop()) return false
+        }else{
+            res.push(s[i])
         }
     }
-    return res.length === 0
+    return res.length===0
 }
 console.log(newFn(s1));
 console.log(newFn(s2));

@@ -1,15 +1,13 @@
-class fbdy {
+class fbnq {
     constructor() {
         this.events = {}
     }
-
     on(eventName, callback) {
         if (!this.events[eventName]) {
             this.events[eventName] = []
         }
         this.events[eventName].push(callback)
     }
-
     emit(eventName, data) {
         if (this.events[eventName]) {
             this.events[eventName].forEach((callback) => {
@@ -17,7 +15,6 @@ class fbdy {
             })
         }
     }
-
     off(eventName, callback) {
         if (this.events[eventName]) {
             this.events[eventName].filter((element) => {
@@ -25,7 +22,6 @@ class fbdy {
             })
         }
     }
-
     once(eventName, callback) {
         const wrappedCallback = (...args) => {
             callback(...args)

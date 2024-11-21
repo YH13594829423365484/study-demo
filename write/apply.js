@@ -1,5 +1,5 @@
 Function.prototype.myApply = function (context, ...args) {
-    context = context || window
+    contex = context || window
     context.fn = this
     const res = context.fn(args)
     delete context.fn

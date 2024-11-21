@@ -2,8 +2,8 @@ let quickSort = function (arr) {
     if(arr.length<=1){
         return arr
     }
-    let midIndex=Math.floor(arr.length/2)
-    let privot=arr.splice(midIndex,1)[0]
+    let middleIndex=Math.floor(arr.length/2)
+    let privot=arr.splice(middleIndex,1)[0]
     const left=[]
     const right=[]
     for(let i=0;i<arr.length;i++){
@@ -15,3 +15,5 @@ let quickSort = function (arr) {
     }
     return quickSort(left).concat([privot],quickSort(right))
 };
+console.log(quickSort([1,2,7,4,2,5,8,3]));
+
